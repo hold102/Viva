@@ -1,7 +1,4 @@
 public class VivaQ4 {
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int option1;
@@ -9,7 +6,7 @@ public class VivaQ4 {
         int option3;
         int option4;
         int price = 0;
-        
+        //initialize all the variable
         while(true){
         System.out.println();
         System.out.println("Welcome to Maroni's Pizza!");
@@ -20,13 +17,13 @@ public class VivaQ4 {
         System.out.print("Pick an option (1,2,3,4): ");
         option1 = scanner.nextInt();
         System.out.println("");
-        
+       //print out the main menu 
            
-            
+       //This one is label for option 6 to return back main menu    
        return_menu:{         
        while(true){
         switch(option1){
-                
+            //sub-menu for PIZZA    
             case 1:
                 System.out.println();  
                 System.out.println("PIZZA");
@@ -70,7 +67,7 @@ public class VivaQ4 {
                 
                 
                        
-                                
+            //sub-menu for DRINKS                  
             case 2:
                 System.out.println();
                 System.out.println("DRINKS");
@@ -110,7 +107,7 @@ public class VivaQ4 {
                     break;
                  }else if (option3==6){
                     break return_menu;} 
-                 
+            //sub-menu for DESSERT     
             case 3:
                 System.out.println();
                 System.out.println("DESSERT");
@@ -122,7 +119,8 @@ public class VivaQ4 {
                 System.out.println("6 BACK TO MENU");
                 System.out.print("Pick an option (1,2,3,4,5,6): ");
                 option4 = scanner.nextInt();
-               
+
+                
                 if (option4==1){
                     price+=7;
                     System.out.println("Added Tiramisu");
@@ -150,7 +148,8 @@ public class VivaQ4 {
                     break;
                  }else if (option4==6){
                     break return_menu;} 
-                
+
+            //CHECKOUT option
             case 4:
                 System.out.println("Total price: RM"+price);
                 System.out.println("Thank you for your payment.");
