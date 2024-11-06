@@ -62,7 +62,7 @@ public class VivaQ4 {
                     System.out.println("Current Total: RM"+price);
                     break;
                     // to avoid invalid input 
-                }else if (option2<0 || option2>6){
+                }else if (option2<1 || option2>6){
                     System.out.println("An error has occurred, please try again.");
                     break;
                  }else if (option2==6){
@@ -110,7 +110,7 @@ public class VivaQ4 {
                     System.out.println("Current Total: RM"+price);
                     break;
                     // to avoid invalid input 
-                }else if (option3<0 || option3>6){
+                }else if (option3<1 || option3>6){
                     System.out.println("An error has occurred, please try again.");
                     break;
                 }else if (option3==6){
@@ -155,7 +155,7 @@ public class VivaQ4 {
                     System.out.println("Current Total: RM"+price);
                     break;
                 // to avoid invalid input    
-                }else if (option4<0 || option4>6){
+                }else if (option4<1 || option4>6){
                     System.out.println("An error has occurred, please try again.");
                     break;
                  }else if (option4==6){
