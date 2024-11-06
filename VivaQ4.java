@@ -61,6 +61,10 @@ public class VivaQ4 {
                     System.out.println("Added Margherita");
                     System.out.println("Current Total: RM"+price);
                     break;
+                    // to avoid invalid input 
+                }else if (option2<0 || option2>6){
+                    System.out.println("An error has occurred, please try again.");
+                    break;
                  }else if (option2==6){
                     break return_menu;}
                 
@@ -105,7 +109,11 @@ public class VivaQ4 {
                     System.out.println("Added Mineral Water");
                     System.out.println("Current Total: RM"+price);
                     break;
-                 }else if (option3==6){
+                    // to avoid invalid input 
+                }else if (option3<0 || option3>6){
+                    System.out.println("An error has occurred, please try again.");
+                    break;
+                }else if (option3==6){
                     break return_menu;} 
             //sub-menu for DESSERT     
             case 3:
@@ -146,6 +154,10 @@ public class VivaQ4 {
                     System.out.println("Added Raspberry Pie");
                     System.out.println("Current Total: RM"+price);
                     break;
+                // to avoid invalid input    
+                }else if (option4<0 || option4>6){
+                    System.out.println("An error has occurred, please try again.");
+                    break;
                  }else if (option4==6){
                     break return_menu;} 
 
@@ -156,7 +168,7 @@ public class VivaQ4 {
                 return;
             // in case of invalid input at main menu
             default:
-                System.out.println("An error has occurred, please try again。");
+                System.out.println("An error has occurred, please try again.");
                 break return_menu;
                     
                 
