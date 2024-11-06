@@ -154,7 +154,11 @@ public class VivaQ4 {
                 System.out.println("Total price: RM"+price);
                 System.out.println("Thank you for your payment.");
                 return;
-                
+            // in case of invalid input at main menu
+            default:
+                System.out.println("An error has occurred, please try again。");
+                break return_menu;
+                    
                 
                
         }    
