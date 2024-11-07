@@ -1,11 +1,11 @@
 public class VivaQ4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int option1;
-        int option2;
-        int option3;
-        int option4;
-        int price = 0;
+        int option1, option2, option3, option4;
+        float price = 0;
+        int pizza = 0;
+        int drink = 0;
+        int dessert = 0;
         //initialize all the variable
         while(true){
         System.out.println();
@@ -16,14 +16,12 @@ public class VivaQ4 {
         System.out.println("4. CHECKOUT");
         System.out.print("Pick an option (1,2,3,4): ");
         option1 = scanner.nextInt();
-        System.out.println("");
-       //print out the main menu 
-           
-       //This one is label for option 6 to return back main menu    
+        //print out the main menu 
+       //This one is label for option 6 to return back main menu     
        return_menu:{         
        while(true){
         switch(option1){
-            //sub-menu for PIZZA    
+        //sub-menu for PIZZA    
             case 1:
                 System.out.println();  
                 System.out.println("PIZZA");
@@ -38,40 +36,42 @@ public class VivaQ4 {
         
                 if (option2==1){
                     price+=15;
+                    pizza++;
                     System.out.println("Added Chicken Pepperoni");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option2==2){
                     price+=18;
+                    pizza++;
                     System.out.println("Added Chicken Supreme");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option2==3){
                     price+=12;
+                    pizza++;
                     System.out.println("Added Vegan Indulgence");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option2==4){
                     price+=22;
+                    pizza++;
                     System.out.println("Added Beef Delight");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option2==5){
                     price+=9;
+                    pizza++;
                     System.out.println("Added Margherita");
                     System.out.println("Current Total: RM"+price);
                     break;
                     // to avoid invalid input 
-                }else if (option2<1 || option2>6){
+                    }else if (option2<1 || option2>6){
                     System.out.println("An error has occurred, please try again.");
                     break;
                  }else if (option2==6){
-                    break return_menu;}
-                
-                
-                
-                       
-            //sub-menu for DRINKS                  
+                    break return_menu;
+                 }
+            //sub-menu for DRINKS                           
             case 2:
                 System.out.println();
                 System.out.println("DRINKS");
@@ -86,36 +86,42 @@ public class VivaQ4 {
                 
                 if (option3==1){
                     price+=8;
+                    drink++;
                     System.out.println("Added Strawberry Smoothie");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option3==2){
                     price+=8;
+                    drink++;
                     System.out.println("Added Banana Smoothie");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option3==3){
                     price+=12;
+                    drink++;
                     System.out.println("Added Mocktail");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option3==4){
                     price+=5;
+                    drink++;
                     System.out.println("Added Soft Drink");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option3==5){
                     price+=3;
+                    drink++;
                     System.out.println("Added Mineral Water");
                     System.out.println("Current Total: RM"+price);
                     break;
                     // to avoid invalid input 
-                }else if (option3<1 || option3>6){
+                    }else if (option3<1 || option3>6){
                     System.out.println("An error has occurred, please try again.");
                     break;
                 }else if (option3==6){
-                    break return_menu;} 
-            //sub-menu for DESSERT     
+                    break return_menu;      
+                }   
+            //sub-menu for DESSERT      
             case 3:
                 System.out.println();
                 System.out.println("DESSERT");
@@ -127,50 +133,69 @@ public class VivaQ4 {
                 System.out.println("6 BACK TO MENU");
                 System.out.print("Pick an option (1,2,3,4,5,6): ");
                 option4 = scanner.nextInt();
-
-                
+               
                 if (option4==1){
                     price+=7;
+                    dessert++;
                     System.out.println("Added Tiramisu");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option4==2){
                     price+=10;
+                    dessert++;
                     System.out.println("Added Strawberry Shortcake");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option4==3){
                     price+=4;
+                    dessert++;
                     System.out.println("Added Green Jello");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option4==4){
                     price+=15;
+                    dessert++;
                     System.out.println("Added Creme1 Brulee");
                     System.out.println("Current Total: RM"+price);
                     break;
                 }else if (option4==5){
                     price+=20;
+                    dessert++;
                     System.out.println("Added Raspberry Pie");
                     System.out.println("Current Total: RM"+price);
                     break;
-                // to avoid invalid input    
-                }else if (option4<1 || option4>6){
+                    // to avoid invalid input 
+                    }else if (option4<1 || option4>6){
                     System.out.println("An error has occurred, please try again.");
                     break;
                  }else if (option4==6){
-                    break return_menu;} 
-
-            //CHECKOUT option
+                    break return_menu;
+                 } 
+                
             case 4:
+                //CHECKOUT number 4 option in main menu
+                //discounted price for one-of-each offer
+                float discounted_price = price*0.8f;
+                if(pizza>0 && drink>0 && dessert>0){
+                System.out.println("Your total is RM"+price); 
+                System.out.println("You've availed the One-of-each offer. You get a 20% discount!");
+                System.out.println("Your new total is RM"+ discounted_price);
+                System.out.println("");
+                System.out.println("");
+                System.out.println("Have a nice day!");
+                return;
+                }else{
                 System.out.println("Total price: RM"+price);
                 System.out.println("Thank you for your payment.");
+                System.out.println("");
+                System.out.println("");
+                System.out.println("Have a nice day!");
                 return;
-            // in case of invalid input at main menu
+                }
+            // in case of invalid input at main menu    
             default:
                 System.out.println("An error has occurred, please try again.");
                 break return_menu;
-                    
                 
                
         }    
@@ -182,11 +207,6 @@ public class VivaQ4 {
         
         
         
-        
-        
-        
-        
-    }
     
 }
 
