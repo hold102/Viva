@@ -64,13 +64,14 @@ public class VivaQ4 {
                     System.out.println("Added Margherita");
                     System.out.println("Current Total: RM"+price);
                     break;
-                    // to avoid invalid input 
-                    }else if (option2<1 || option2>6){
+                //to go back to the main menu with label
+                }else if (option2==6){
+                    break return_menu;
+                //to avoid invalid input
+                }else{
                     System.out.println("An error has occurred, please try again.");
                     break;
-                 }else if (option2==6){
-                    break return_menu;
-                 }
+                        }
             //sub-menu for DRINKS                           
             case 2:
                 System.out.println();
@@ -114,13 +115,13 @@ public class VivaQ4 {
                     System.out.println("Added Mineral Water");
                     System.out.println("Current Total: RM"+price);
                     break;
-                    // to avoid invalid input 
-                    }else if (option3<1 || option3>6){
+                }else if (option3==6){
+                    break return_menu;
+                // to avoid invalid input       
+                }else{
                     System.out.println("An error has occurred, please try again.");
                     break;
-                }else if (option3==6){
-                    break return_menu;      
-                }   
+                        }   
             //sub-menu for DESSERT      
             case 3:
                 System.out.println();
@@ -164,13 +165,13 @@ public class VivaQ4 {
                     System.out.println("Added Raspberry Pie");
                     System.out.println("Current Total: RM"+price);
                     break;
-                    // to avoid invalid input 
-                    }else if (option4<1 || option4>6){
+                }else if (option4==6){
+                    break return_menu;
+                // to avoid invalid input 
+                }else{
                     System.out.println("An error has occurred, please try again.");
                     break;
-                 }else if (option4==6){
-                    break return_menu;
-                 } 
+                } 
                 
             case 4:
                 //CHECKOUT number 4 option in main menu
