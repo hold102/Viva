@@ -181,8 +181,8 @@ public class VivaQ4 {
                 float discounted_price = price*0.8f;
                 if(pizza>0 && drink>0 && dessert>0){
                 System.out.printf("Your total is RM%.2f ",price); 
-                System.out.println("/nYou've availed the One-of-each offer. You get a 20% discount!");
-                System.out.printf("/nYour new total is RM%.2f ", discounted_price);
+                System.out.println("\nYou've availed the One-of-each offer. You get a 20% discount!");
+                System.out.printf("\nYour new total is RM%.2f ", discounted_price);
                 System.out.println("");
                 System.out.println("");
                 System.out.println("Have a nice day!");
