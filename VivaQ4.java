@@ -166,29 +166,28 @@ public class VivaQ4 {
                     System.out.println("Added Raspberry Pie");
                     System.out.println("Current Total: RM"+price);
                     break;
-                }else if (option4==6){
+                 }else if (option4==6){
                     break return_menu;
                 // to avoid invalid input 
-                }else{
+                 }else{
                     System.out.println("An error has occurred, please try again.");
-                    break;
-                } 
-                
+                    break; 
+                 }
             case 4:
                 //CHECKOUT number 4 option in main menu
                 //discounted price for one-of-each offer
                 float discounted_price = price*0.8f;
                 if(pizza>0 && drink>0 && dessert>0){
-                System.out.printf("Total price: RM+%.2f%n",price);
-                System.out.println("You've availed the One-of-each offer. You get a 20% discount!");
-                System.out.println("Your new total is RM"+ discounted_price);
+                System.out.printf("Your total is RM%.2f ",price); 
+                System.out.println("\nYou've availed the One-of-each offer. You get a 20% discount!");
+                System.out.printf("Your new total is RM%.2f",discounted_price);
                 System.out.println("");
                 System.out.println("");
                 System.out.println("Have a nice day!");
                 return;
                 }else{
-                System.out.println("Total price: RM"+price);
-                System.out.println("Thank you for your payment.");
+                System.out.printf("Total price: RM%.2f ",price);
+                System.out.println("\nThank you for your payment.");
                 System.out.println("");
                 System.out.println("");
                 System.out.println("Have a nice day!");
@@ -209,7 +208,7 @@ public class VivaQ4 {
         
         
         
-    
+      
 }
 
   
