@@ -179,7 +179,7 @@ public class VivaQ4 {
                 //discounted price for one-of-each offer
                 float discounted_price = price*0.8f;
                 if(pizza>0 && drink>0 && dessert>0){
-                System.out.println("Your total is RM"+price); 
+                System.out.printf("Total price: RM+%.2f%n",price);
                 System.out.println("You've availed the One-of-each offer. You get a 20% discount!");
                 System.out.println("Your new total is RM"+ discounted_price);
                 System.out.println("");
