@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class VivaQ4 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+         Scanner scanner = new Scanner(System.in);
         int option1, option2, option3, option4;
         float price = 0;
         int pizza = 0;
@@ -180,7 +180,8 @@ public class VivaQ4 {
                 //discounted price for one-of-each offer
                 float discounted_price = price*0.8f;
                 if(pizza>0 && drink>0 && dessert>0){
-                System.out.printf("Your total is RM%.2f ",price); 
+                
+                System.out.printf("\nYour total is RM%.2f ",price); 
                 System.out.println("\nYou've availed the One-of-each offer. You get a 20% discount!");
                 System.out.printf("\nYour new total is RM%.2f ", discounted_price);
                 System.out.println("");
@@ -190,7 +191,7 @@ public class VivaQ4 {
                 input=false;
                 break;
                 }else{
-                System.out.printf("Total price: RM%.2f ",price);
+                System.out.printf("\nTotal price: RM%.2f ",price);
                 System.out.println("\nThank you for your payment.");
                 System.out.println("");
                 System.out.println("");
